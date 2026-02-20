@@ -10,6 +10,8 @@ services:
     envVars:
       - key: INSTANTLY_API_KEY_CONNECT_RESOURCE
         sync: false
+      - key: CONNECT_RESOURCES_SHEET_ID
+        sync: false
       - key: CONNECT_RESOURCES_REPORT_RECIPIENTS
         sync: false
       - key: SMTP_EMAIL
