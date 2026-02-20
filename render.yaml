@@ -1,0 +1,20 @@
+# Render Configuration for Connect Resources Report
+services:
+  # Connect Resources Report
+  - type: cron
+    name: connect-resources-report
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python connect_resources_report.py"
+    schedule: "0 4 * * 1,4" # Mon & Thu at 8:00 AM Dubai (4:00 AM UTC)
+    envVars:
+      - key: INSTANTLY_API_KEY_CONNECT_RESOURCE
+        sync: false
+      - key: CONNECT_RESOURCES_REPORT_RECIPIENTS
+        sync: false
+      - key: SMTP_EMAIL
+        sync: false
+      - key: SMTP_PASSWORD
+        sync: false
+      - key: TZ
+        value: Asia/Dubai

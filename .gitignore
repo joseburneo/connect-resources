@@ -1,0 +1,12 @@
+# Environments
+.env
+
+# Credentials
+credentials.json
+
+# Cache
+__pycache__/
+*.pyc
+
+# Local Data
+.DS_Store
